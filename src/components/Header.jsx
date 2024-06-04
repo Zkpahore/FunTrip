@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 function Header() {
   const [showNav, setShowNav] = useState(false);
@@ -13,12 +14,14 @@ function Header() {
       <div className="container flex justify-between items-center">
         <img src='394917i.png' alt="Logo" className="w-24 h-12" />
         <nav className={`lg:flex hidden justify-center items-center flex-grow ${showNav ? 'hidden' : 'block'}`}>
-          <ul className="flex space-x-4 justify-center items-center">
-            <li><a href="#" className="hover:text-gray-400">Booking</a></li>
-            <li><a href="#" className="hover:text-gray-400">Facilities</a></li>
-            <li><a href="#" className="hover:text-gray-400">About Us</a></li>
-            <li><a href="#" className="hover:text-gray-400">Location</a></li>
-            <li><a href="#" className="hover:text-gray-400">Contact</a></li>
+          <ul className="flex space-x-6 justify-center items-center font-semibold">
+            <li><Link to="/" className="hover:text-gray-400">Home</Link></li>
+            <li><Link to="/Booking" className="hover:text-gray-400">Booking</Link></li>
+            <li><Link to="/Facities" className="hover:text-gray-400">Facilities</Link></li>
+            <li><Link to="/About-Us" className="hover:text-gray-400">About Us</Link></li>
+            <li><Link to="/location" className="hover:text-gray-400">Location</Link></li>
+            <li><Link to="/contact" className="hover:text-gray-400">Contact</Link></li>
+            
             {/* Add more links as needed */}
           </ul>
         </nav>
@@ -38,11 +41,12 @@ function Header() {
       {/* Mobile Navigation */}
       <nav className={`lg:hidden bg-gray-200 absolute ${showNav ? 'block' : 'hidden'}`}>
         <ul className="flex flex-col space-y-4 p-4">
-          <li><a href="#" className="hover:text-gray-800">Booking</a></li>
-          <li><a href="#" className="hover:text-gray-800">Facilities</a></li>
-          <li><a href="#" className="hover:text-gray-800">About Us</a></li>
-          <li><a href="#" className="hover:text-gray-800">Location</a></li>
-          <li><a href="#" className="hover:text-gray-800">Contact</a></li>
+        <li><Link to="/" className="hover:text-gray-400">Home</Link></li>
+            <li><Link to="/Booking" className="hover:text-gray-400">Booking</Link></li>
+            <li><Link to="/Facities" className="hover:text-gray-400">Facilities</Link></li>
+            <li><Link to="/About-Us" className="hover:text-gray-400">About Us</Link></li>
+            <li><Link to="/location" className="hover:text-gray-400">Location</Link></li>
+            <li><Link to="/contact" className="hover:text-gray-400">Contact</Link></li>
           {/* Add more links as needed */}
         </ul>
       </nav>
