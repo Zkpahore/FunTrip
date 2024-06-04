@@ -12,7 +12,9 @@ function Header() {
   return (
     <header className="text-gray-700 bg-white shadow-md relative">
       <div className="container flex justify-between items-center">
+       <Link to='/'>
         <img src='394917i.png' alt="Logo" className="w-24 h-12" />
+        </Link>
         <nav className={`lg:flex hidden justify-center items-center flex-grow ${showNav ? 'hidden' : 'block'}`}>
           <ul className="flex space-x-6 justify-center items-center font-semibold">
             <li><Link to="/" className="hover:text-gray-400">Home</Link></li>
